@@ -80,6 +80,23 @@ export default function Home() {
         <h3 className="text-gray-500">Featured</h3>
         <h1 className="text-2xl font-bold">My Stack</h1>
       </div>
+      <div className="w-full flex flex-col items-center text-gray-500 mt-20">
+        <p>Developed by <span className="text-primary">Kushal Rathod</span></p>
+        <p>Design Inspirations - 
+          <span>
+            <Link href="https://chanhdai.com/" className="hover:text-primary">
+              {" "}Chanh Dai
+            </Link>
+          </span>
+          {" "}&{" "}
+          <span>
+            <Link href="https://ramx.in/" className="hover:text-primary">
+              Ramxcodes
+            </Link>
+          </span>
+        </p>
+        <p>© 2025. All rights reserved.</p>
+      </div>
     </div>
   );
 }
