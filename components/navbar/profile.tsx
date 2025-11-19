@@ -1,4 +1,6 @@
-import Image from "next/image"
+"use client";
+
+import { motion } from "motion/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 type ProfileProps = {
@@ -11,13 +13,14 @@ const Profile = ({ height, width, className } : ProfileProps) => {
   return (
     <Tooltip>
         <TooltipTrigger className="block">
-            <Image
+            <motion.img
+              initial={{ borderRadius: "100%" }}
+              whileHover={{ borderRadius: "10%", transition: { duration: 0.5, ease: "easeInOut" } }}
               src="/profile.jpg"
               alt="Profile"
               height={1000}
               width={1000}
               draggable={false}
-              priority
               className={`${className}`}
               style={{ height: height, width: width }}
             />

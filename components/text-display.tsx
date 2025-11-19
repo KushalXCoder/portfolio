@@ -25,9 +25,9 @@ const TextDisplay = () => {
         <AnimatePresence>
             <motion.p
                 key={currIdx}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: -20, filter: "blur(3px)" }}
+                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                exit={{ opacity: 0, y: 20, filter: "blur(3px)" }}
                 transition={{ duration: 0.8, ease: "backInOut" }}
                 className="absolute"
             >

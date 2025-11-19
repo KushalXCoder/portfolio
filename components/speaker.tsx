@@ -4,7 +4,7 @@ import { Volume2 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "motion/react";
 
-const Speaker = () => {
+const Speaker = ({ name } : { name: string }) => {
   const [isSupported] = useState<boolean>(() => {
     return typeof window !== 'undefined' && 'speechSynthesis' in window;
   })
@@ -17,7 +17,7 @@ const Speaker = () => {
                 const voices = window.speechSynthesis.getVoices();
                 // Try to find a specific, high-quality voice
                 const preferredVoice = voices.find(
-                    (v) => v.lang === 'en-US' && v.name.includes('Google')
+                    (v) => v.lang === 'en-IN' && v.name.includes('Google')
                 ) || voices.find((v) => v.lang.startsWith('en')); // Fallback to any English voice
 
                 if (preferredVoice) {
@@ -44,7 +44,7 @@ const Speaker = () => {
         window.speechSynthesis.cancel(); 
 
         // 2. Create the utterance
-        const utterance = new SpeechSynthesisUtterance("Kushal Rathod");
+        const utterance = new SpeechSynthesisUtterance(`${name}`);
 
         // 3. Apply the preferred voice if available
         if (voice) {
@@ -54,11 +54,11 @@ const Speaker = () => {
         // 4. Set other optional properties
         utterance.pitch = 1;
         utterance.rate = 1;
-        utterance.lang = 'en-US';
+        utterance.lang = 'en-UK';
 
         // 5. Speak the text
         window.speechSynthesis.speak(utterance);
-    }, [isSupported, voice]);
+    }, [isSupported, voice, name]);
 
     if (!isSupported) {
         return null;
