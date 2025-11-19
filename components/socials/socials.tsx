@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Link from "next/link";
 
 const socials = [

@@ -18,12 +18,12 @@ const links = {
 const LanguageBox = ({ name } : LanguageBoxProps) => {
   return (
     <motion.div
-        className="flex items-center gap-2 w-fit border border-dashed inner-shadow mx-2 px-4 py-1 rounded-lg"
+        className="flex items-center gap-2 w-fit border border-dashed inner-shadow mx-2 px-4 py-1 rounded-lg hover:bg-secondary hover:border-primary transition-all"
         initial={{ scale: 1 }}
-        whileHover={{ scale: 1.02, transition: { duration: 0.5, ease: "easeInOut" } }}
+        whileHover={{ scale: 1.01, transition: { duration: 0.1, ease: "easeInOut" } }}
     >
         <Image height={1000} width={1000} src={links[name]} alt={name} draggable={false} className="h-6 w-6" />
-        <p className="text-primary">
+        <p className="text-primary cursor-default">
             {name}
         </p>
     </motion.div>

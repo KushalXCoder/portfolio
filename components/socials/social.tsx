@@ -1,4 +1,4 @@
-import Socials from '../socials'
+import Socials from './socials'
 import { Button } from '../ui/button'
 
 const Social = () => {

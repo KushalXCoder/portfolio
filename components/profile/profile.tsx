@@ -3,7 +3,7 @@ import Active from '../active'
 import ChangingName from '../changing-name'
 import { BadgeCheck } from 'lucide-react'
 import Speaker from '../speaker'
-import Setting from '../settings'
+import Setting from '../about-me/settings'
 import TextDisplay from '../text-display'
 import Profile from '../navbar/profile'
 

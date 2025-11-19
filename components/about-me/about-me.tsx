@@ -20,7 +20,7 @@ const AboutMe = () => {
         }
         )}
         <span>
-            <Link href="/">
+            <Link href="#stack">
             , more...
             </Link>
         </span>
