@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 type LanguageBoxProps = {
-    name: string;
+    name: keyof typeof links,
 };
 
 const links = {
@@ -21,7 +22,7 @@ const LanguageBox = ({ name } : LanguageBoxProps) => {
         initial={{ scale: 1 }}
         whileHover={{ scale: 1.02, transition: { duration: 0.5, ease: "easeInOut" } }}
     >
-        <img height={1000} width={1000} src={links[name]} alt={name} draggable={false} className="h-6 w-6" />
+        <Image height={1000} width={1000} src={links[name]} alt={name} draggable={false} className="h-6 w-6" />
         <p className="text-primary">
             {name}
         </p>

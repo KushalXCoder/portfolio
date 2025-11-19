@@ -5,7 +5,7 @@ import { Sun } from "lucide-react"
 const Navbar = () => {
   const navItems = [
     { name: "Work", href: "/" },
-    { name: "Components", href: "/" },
+    { name: "Components", href: "/components" },
   ];
 
   return (
