@@ -23,7 +23,7 @@ export const GET = async () => {
         const tokenJson = await tokenResponse.json();
         const access_token = tokenJson.access_token;
 
-        const res = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=1", {
+        const res = await fetch("https://api.spotify.com/v1/me/player/recently-played?limit=5", {
             headers: {
             Authorization: `Bearer ${access_token}`,
             },
