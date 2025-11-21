@@ -57,7 +57,7 @@ const MusicBox = () => {
   return (
     <>
         <div className="flex items-center gap-2">
-            <Image src="/spotify.svg" alt="Spotify" height={1000} width={1000} draggable={false} priority className="h-7 w-7" />
+            <Image src="/companies/spotify.svg" alt="Spotify" height={1000} width={1000} draggable={false} priority className="h-7 w-7" />
             <h1 className="text-2xl font-bold">Music</h1>
         </div>
         <p className="text-primary/70">Here, is my taste in music.</p>

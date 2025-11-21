@@ -15,7 +15,7 @@ const Hobbies = () => {
         <div className="mt-5 flex items-center">
             <Tooltip>
                 <TooltipTrigger>
-                    <Image src="/moneyheist.jpg" alt="Money Heist" height={1000} width={1000}  priority draggable={false} className="h-40 w-30" />
+                    <Image src="/movies-and-webshows/moneyheist.jpg" alt="Money Heist" height={1000} width={1000}  priority draggable={false} className="h-40 w-30" />
                 </TooltipTrigger>
                 <TooltipContent>
                     <p className="text-sm font-poppins">Money Heist</p>

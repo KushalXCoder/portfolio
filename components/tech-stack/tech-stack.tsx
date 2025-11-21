@@ -64,7 +64,7 @@ const TechStack = () => {
                                 <Tooltip>
                                     <TooltipTrigger>
                                         <Image
-                                            src={`/${item.path}${item.name === "zustand" ? ".png" : ".svg"}`}
+                                            src={`/technologies/${item.path}${item.name === "zustand" ? ".png" : ".svg"}`}
                                             alt={item.name}
                                             height={1000}
                                             width={1000}

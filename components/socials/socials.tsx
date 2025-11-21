@@ -5,9 +5,9 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Link from "next/link";
 
 const socials = [
-    { name: "GitHub", icon: "github", link: "https://github.com/KushalXCoder"},
-    { name: "LinkedIn", icon: "linkedin", link: "https://www.linkedin.com/in/kushalrathod/" },
-    { name: "Gmail", icon: "gmail", link: "mailto:kushalrathod@gmail.com" },
+    { name: "GitHub", icon: "/technologies/github", link: "https://github.com/KushalXCoder"},
+    { name: "LinkedIn", icon: "/companies/linkedin", link: "https://www.linkedin.com/in/kushalrathod/" },
+    { name: "Gmail", icon: "/companies/gmail", link: "mailto:kushalrathod@gmail.com" },
 ]
 
 const Socials = () => {
@@ -18,12 +18,12 @@ const Socials = () => {
                 <TooltipTrigger>
                     <Link href={social.link} target="_blank">
                         <motion.img
-                            src={`./${social.icon}.svg`}
+                            src={`.${social.icon}.svg`}
                             alt={social.icon}
                             draggable={false}
-                            initial={{ opacity: 0.6 }}
+                            initial={{ opacity: 0.8 }}
                             whileHover={{ opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
-                            className="h-9 w-9 opacity-60 hover:opacity-100"
+                            className="h-9 w-9"
                         />
                     </Link>
                 </TooltipTrigger>
