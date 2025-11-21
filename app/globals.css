@@ -123,6 +123,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .nav-link::after {
   content: "";
   height: 1px;
