@@ -3,38 +3,44 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 const TechStack = () => {
     const languages = [
+        { name: "c++", path: "c-plusplus" },
         { name: "javascript", path: "javascript" },
+        { name: "typescript", path: "typescript" },
     ];
 
     const frameworks = [
-        { name: "jquery", path: "jquery" },
+        { name: "reactjs", path: "react" },
+        { name: "nextjs", path: "nextjs" },
+        { name: "nodejs", path: "nodejs" },
+        { name: "expressjs", path: "expressjs" },
         { name: "json-schema", path: "json-schema" },
-        { name: "motion", path: "motion" },
-        { name: "reactrouter", path: "reactrouter" },
-        { name: "shadcn-ui", path: "shadcn-ui" },
-        { name: "radix-ui", path: "radix-ui" },
         { name: "tanstack", path: "tanstack" },
         { name: "zod", path: "zod" },
+        { name: "reactrouter", path: "reactrouter" },
+        { name: "motion", path: "motion" },
+        { name: "shadcn-ui", path: "shadcn-ui" },
+        { name: "radix-ui", path: "radix-ui" },
         { name: "magicui", path: "magicui" },
     ];
 
     const tools = [
-        { name: "npm", path: "npm" },
-        { name: "prettier-icon", path: "prettier-icon" },
-        { name: "vscode", path: "vscode" },
-        { name: "dotenv", path: "dotenv" },
+        { name: "mongodb", path: "mongodb" },
         { name: "redis", path: "redis" },
+        { name: "dotenv", path: "dotenv" },
+        { name: "npm", path: "npm" },
+        { name: "vscode", path: "vscode" },
+        { name: "prettier-icon", path: "prettier-icon" },
     ];
 
     const services = [
-        { name: "authjs", path: "authjs" },
-        { name: "vercel", path: "vercel" },
-        { name: "shopify", path: "shopify" },
-        { name: "linux", path: "linux" },
         { name: "github", path: "github" },
+        { name: "vercel", path: "vercel" },
+        { name: "vitejs", path: "vitejs" },
+        { name: "linux", path: "linux" },
+        { name: "authjs", path: "authjs" },
         { name: "copilot", path: "copilot" },
         { name: "discord", path: "discord" },
-        { name: "vitejs", path: "vitejs" },
+        { name: "shopify", path: "shopify" },
     ];
 
     const stack = [
