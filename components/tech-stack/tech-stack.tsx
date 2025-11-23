@@ -11,6 +11,7 @@ const TechStack = () => {
     const frameworks = [
         { name: "reactjs", path: "react" },
         { name: "nextjs", path: "nextjs" },
+        { name: "tailwindcss", path: "tailwind" },
         { name: "nodejs", path: "nodejs" },
         { name: "expressjs", path: "expressjs" },
         { name: "json-schema", path: "json-schema" },
