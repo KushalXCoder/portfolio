@@ -1,25 +1,22 @@
 import LanguageBox from '../language-box';
 import Link from 'next/link';
 
-type Name = "React" | "NextJS" | "TailwindCSS" | "TypeScript" | "NodeJS";
+const links = [
+  { name: "React", url: "/technologies/react.svg" },
+  { name: "NextJS", url: "/technologies/nextjs.svg" },
+  { name: "TailwindCSS", url: "/technologies/tailwind.svg" },
+  { name: "TypeScript", url: "/technologies/typescript.svg" },
+  { name: "NodeJS", url: "/technologies/nodejs.svg" },
+];
 
 const AboutMe = () => {
-  const tech = ["React", "NextJS", "TailwindCSS", "TypeScript", "NodeJS"];  
   return (
     <div>
-        <p className="flex flex-wrap whitespace-pre-wrap items-center text-zinc-600 mt-5 text-lg">
+        <p className="flex flex-wrap whitespace-pre-wrap items-center text-zinc-600 mt-5">
             <span>
                 I build <span className="font-bold">scalable</span> and <span className="font-bold">efficient</span> web apps (which are also appealing : ) using
             </span>
-            {tech.map((item, index) => {
-                return (
-                <>
-                    <LanguageBox key={index} name={item as Name} />
-                    {index !== tech.length - 1 && <span>,</span>}
-                </>
-                )
-            }
-            )}
+            <LanguageBox data={links} />
             <span>
                 <Link href="#stack">
                 , more...
