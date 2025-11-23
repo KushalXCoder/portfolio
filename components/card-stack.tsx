@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, PanInfo } from "motion/react";
 import { useState } from "react";
+import { Disc3 } from "lucide-react";
+import MusicLoader from "./hobbies/music-loader";
 
 type CardStackProps = {
     songs: AlbumData[];
@@ -18,30 +20,21 @@ const CardStack = ({ songs }: CardStackProps) => {
     e: MouseEvent | TouchEvent | PointerEvent,
     info: PanInfo
   ) => {
-    if (e instanceof TouchEvent) {
-      const touch = e.touches[0];
-      console.log(
-        "Dragging",
-        touch.clientX.toFixed(),
-        touch.clientY.toFixed()
-      );
-    } else {
-      if (Number(e.clientX.toFixed()) > 1500) {
-        setNextIdx(currIdx);
-        setCurrIdx((prevIdx) => (prevIdx + 1) % songs.length);
-      }
-      console.log(
-        "Dragging",
-        e.clientX.toFixed(),
-        e.clientY.toFixed()
-      );
+    const offsetX = info.offset.x;
+    if (offsetX > 100) {
+      setNextIdx(currIdx);
+      setCurrIdx(prev => (prev + 1 + songs.length) % songs.length);
+    } else if (offsetX < -100) {
+      setNextIdx(currIdx);
+      if(currIdx == 0) setCurrIdx(songs.length - 1);
+      else setCurrIdx(prev => (prev - 1) % songs.length);
     }
   };
 
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col gap-3 relative h-26 mt-5">
-        {songs.length > 0 && (
+        {songs.length > 0 ? (
           <>
             <motion.div
               drag
@@ -49,16 +42,19 @@ const CardStack = ({ songs }: CardStackProps) => {
               onDragEnd={handleDrag}
               className="flex flex-col w-full absolute gap-2 inner-shadow bg-secondary rounded-lg p-3"
             >
-              <div className="flex items-end gap-4">
-                  <Image src={songs[currIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
-                  <div>
-                      <h1 className="text-lg">
-                          <Link href={songs[currIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
-                              {songs[currIdx].name}
-                          </Link>
-                      </h1>
-                      <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[currIdx].artists[0].name}</h3>
-                  </div>
+              <div className="flex justify-between items-end gap-4">
+                <div className="flex items-end gap-4">
+                    <Image src={songs[currIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
+                    <div>
+                        <h1 className="text-lg">
+                            <Link href={songs[currIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
+                                {songs[currIdx].name}
+                            </Link>
+                        </h1>
+                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[currIdx].artists[0].name}</h3>
+                    </div>
+                </div>
+                <Disc3 className="animate-spin" />
               </div>
             </motion.div>
             <motion.div
@@ -67,21 +63,25 @@ const CardStack = ({ songs }: CardStackProps) => {
               onDragEnd={handleDrag}
               className="flex flex-col w-full absolute gap-2 inner-shadow bg-secondary rounded-lg p-3"
             >
-              <div className="flex items-end gap-4">
-                  <Image src={songs[nextIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
-                  <div>
-                      <h1 className="text-lg">
-                          <Link href={songs[nextIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
-                              {songs[nextIdx].name}
-                          </Link>
-                      </h1>
-                      <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[nextIdx].artists[0].name}</h3>
-                  </div>
+              <div className="flex justify-between items-end gap-4">
+                <div className="flex items-end gap-4">
+                    <Image src={songs[nextIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
+                    <div>
+                        <h1 className="text-lg">
+                            <Link href={songs[nextIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
+                                {songs[nextIdx].name}
+                            </Link>
+                        </h1>
+                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[nextIdx].artists[0].name}</h3>
+                    </div>
+                </div>
+                <Disc3 className="animate-spin" />
               </div>
             </motion.div>
           </>
+        ) : (
+          <MusicLoader />
         )}
-        <p>Loadng...</p>
       </div>
       <div className="flex justify-between items-center">
         <p className="text-gray-500 mt-1">
