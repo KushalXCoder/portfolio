@@ -1,6 +1,6 @@
-import Link from "next/link"
-import Profile from "./profile"
-import { Sun } from "lucide-react"
+import Link from "next/link";
+import Profile from "./profile";
+import ModeToogle from "./mode-toggle";
 
 const Navbar = () => {
   const navItems = [
@@ -22,9 +22,7 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <div className="border p-2 rounded-full cursor-pointer ring ring-accent">
-          <Sun className="h-5 w-5" />
-        </div>
+        <ModeToogle />
     </div>
   )
 }

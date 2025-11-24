@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
+import ThemeProvider from "@/providers/theme-provider";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -33,8 +34,15 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
-        <Navbar/>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar/>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
