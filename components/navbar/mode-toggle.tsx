@@ -3,26 +3,30 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
 const ModeToggle = () => {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [showReveal, setShowReveal] = useState(false);
-  const [mode, setMode] = useState<"light" | "dark">("light");
+  const [mounted, setMounted] = useState<boolean>(false);
 
   const handleToggle = (newMode: "light" | "dark") => {
     setShowReveal(true);
 
     setTimeout(() => {
       setTheme(newMode);
-      setMode(newMode);
     }, 300);
 
     setTimeout(() => {
       setShowReveal(false);
     }, 900);
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -37,21 +41,23 @@ const ModeToggle = () => {
         />
       </div>
 
-      {createPortal(
-        <AnimatePresence>
-          {showReveal && (
-            <motion.div
-              initial={{ clipPath: "circle(0% at 100% 0)" }}
-              animate={{ clipPath: "circle(160% at 0 0)" }}
-              transition={{ duration: 0.9, ease: "easeInOut" }}
-              className={`fixed inset-0 pointer-events-none z-100 opacity-10 ${
-                mode === "light" ? "bg-black" : "bg-white"
-              }`}
-            />
-          )}
-        </AnimatePresence>,
-        document.body
-      )}
+      {mounted &&
+        createPortal(
+          <AnimatePresence>
+            {showReveal && (
+              <motion.div
+                initial={{ clipPath: "circle(0% at 100% 0)" }}
+                animate={{ clipPath: "circle(160% at 0 0)" }}
+                transition={{ duration: 0.9, ease: "easeInOut" }}
+                className={`fixed inset-0 pointer-events-none z-100 opacity-10 ${
+                  theme === "light" ? "bg-black" : "bg-white"
+                }`}
+              />
+            )}
+          </AnimatePresence>,
+          document.body
+        )
+      }
     </>
   );
 };
