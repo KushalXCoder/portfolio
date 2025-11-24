@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={item.href}
-              className="nav-link relative text-lg"
+              className="text-lg hover:text-blue-500 transition-colors"
             >
               {item.name}
             </Link>

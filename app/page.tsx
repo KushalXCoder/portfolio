@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { ReactLenis } from 'lenis/react';
 
 export default function Home() {
-  const gradient = "bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.04)_2px,transparent_2px,transparent_6px)]";
+  const gradient = "bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.04)_2px,transparent_2px,transparent_6px)] dark:bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.04)_2px,transparent_2px,transparent_6px)]";
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {

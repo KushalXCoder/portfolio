@@ -3,6 +3,7 @@
 import { motion } from "motion/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const socials = [
     { name: "GitHub", icon: "/technologies/github", link: "https://github.com/KushalXCoder"},
@@ -11,6 +12,7 @@ const socials = [
 ]
 
 const Socials = () => {
+  const { theme } = useTheme(); 
   return (
     <div className="flex items-center gap-3 mt-8">
         {socials.map((social,index) => (    
@@ -21,7 +23,7 @@ const Socials = () => {
                             src={`.${social.icon}.svg`}
                             alt={social.icon}
                             draggable={false}
-                            initial={{ opacity: 0.8 }}
+                            initial={{ opacity: theme === "dark" ? 0.9 : 0.8 }}
                             whileHover={{ opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
                             className="h-9 w-9"
                         />

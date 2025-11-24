@@ -47,9 +47,9 @@ const Experience = () => {
                 <Image width={1000} height={1000} src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1" className="h-6 w-6 opacity-50"/>
               </Link>
             </div>
-            <div className="border rounded-lg bg-green-100 inner-shadow flex items-center gap-2 px-4 py-1">
+            <div className="border rounded-lg bg-green-100 border-green-500 inner-shadow flex items-center gap-2 px-4 py-1">
               <div className="h-3 w-3 rounded-full bg-green-500"></div>
-              <p className="text-sm">Working</p>
+              <p className="text-sm text-black">Working</p>
             </div>
           </div>
           <div>

@@ -12,7 +12,7 @@ const links = [
 const AboutMe = () => {
   return (
     <div>
-        <p className="flex flex-wrap whitespace-pre-wrap items-center text-zinc-600 mt-5">
+        <p className="flex flex-wrap whitespace-pre-wrap items-center text-zinc-600 dark:text-zinc-500 mt-5">
             <span>
                 I build <span className="font-bold">scalable</span> and <span className="font-bold">efficient</span> web apps (which are also appealing : ) using
             </span>
