@@ -1,6 +1,7 @@
 import { Settings } from 'lucide-react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
 import { Input } from '../ui/input';
+import CopyButton from './copy';
 
 const questions = [
     { name: "Full Name", value: "Kushal Rathod" },
@@ -24,8 +25,13 @@ const Setting = () => {
                     <div className='flex flex-col gap-3'>
                         {questions.map((question,index) => (
                             <div key={index} className='flex flex-col gap-1'>
-                                <h1 className='text-primary'>{question.name}</h1>
-                                <Input value={question.value} disabled className='text-primary border-dashed border-primary' />
+                                <div className='flex justify-between items-center'>
+                                    <h1 className='text-primary'>{question.name}</h1>
+                                    {question.name === 'Contact' && (
+                                        <CopyButton data={question.value} />
+                                    )}
+                                </div>
+                                <Input value={question.value} className='text-primary border-dashed border-primary' />
                             </div>
                         ))}
                     </div>
