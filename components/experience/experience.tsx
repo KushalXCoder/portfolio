@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import LanguageBox from "../language-box";
+import { CircleArrowOutUpRight, Instagram } from "lucide-react";
 
 const used_tech = [
   { name: 'NextJS', url: '/technologies/nextjs.svg' },
@@ -36,15 +37,12 @@ const Experience = () => {
             </div>
           </div>
           <div className="flex justify-between items-center">
-            <div className="flex items-center gap-1">
-              <Link href="/">
-                <Image width={1000} height={1000} src="https://img.icons8.com/forma-thin/288/github.png" alt="github" className="h-6 w-6 opacity-50" />
-              </Link>
+            <div className="flex items-center gap-2">
               <Link href="https://clubduelz.in" target="_blank">
-                <Image width={1000} height={1000} src="https://img.icons8.com/ios/288/domain--v1.png" alt="domain--v1" className="h-6 w-6 opacity-50"/>
+                <CircleArrowOutUpRight className="h-5 w-5 opacity-50" />
               </Link>
-              <Link href="/">
-                <Image width={1000} height={1000} src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1" className="h-6 w-6 opacity-50"/>
+              <Link href="https://www.instagram.com/club.duelz/" target="_blank">
+                <Instagram className="h-6 w-6 opacity-50" />
               </Link>
             </div>
             <div className="border rounded-lg bg-green-100 border-green-500 inner-shadow flex items-center gap-2 px-4 py-1">
