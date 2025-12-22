@@ -30,6 +30,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="220ca3c2-4de5-4186-aa89-e2ba0425b199"></script>
       </head>
       <body
         className={`${poppins.variable} antialiased`}
