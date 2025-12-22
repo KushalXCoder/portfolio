@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import ThemeProvider from "@/providers/theme-provider";
+import CursorAvatar from "@/components/cursor-avatar";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -41,6 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <CursorAvatar />
           <Navbar/>
           {children}
         </ThemeProvider>

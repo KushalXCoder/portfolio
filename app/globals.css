@@ -157,3 +157,17 @@ html {
     }
   }
 }
+
+body {
+  cursor: none;
+}
+
+.cursor-avatar {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 9999;
+  image-rendering: pixelated;
+  transform: translate(-50%, -50%);
+}
