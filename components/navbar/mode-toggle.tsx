@@ -30,7 +30,7 @@ const ModeToggle = () => {
 
   return (
     <>
-      <div className="relative border p-2 rounded-full cursor-pointer">
+      <div className="relative bg-secondary border p-2 rounded-full cursor-pointer">
         <Sun
           onClick={() => handleToggle("dark")}
           className="h-5 w-5 scale-100 rotate-0 transition-all dark:scale-0 dark:rotate-90"
