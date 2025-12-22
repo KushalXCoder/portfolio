@@ -10,6 +10,7 @@ import Social from "@/components/socials/social";
 import TechStack from "@/components/tech-stack/tech-stack";
 import { useEffect, useState } from "react";
 import { ReactLenis } from 'lenis/react';
+import Projects from "@/components/projects/projects";
 
 export default function Home() {
   const gradient = "bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.04)_2px,transparent_2px,transparent_6px)] dark:bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.04)_2px,transparent_2px,transparent_6px)]";
@@ -41,6 +42,8 @@ export default function Home() {
         <Social />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
         <Experience />
+        <div className={`w-full h-12 my-4 ${gradient}`}></div>
+        <Projects />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
         <GitHubCalendarComp />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
