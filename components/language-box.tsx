@@ -15,7 +15,7 @@ const LanguageBox = ({ data } : LanguageBoxProps) => {
     data.map((item,index) => (
       <motion.div
           key={index}
-          className="flex items-center gap-2 w-fit border border-dashed inner-shadow mx-2 px-4 py-1 rounded-lg hover:bg-secondary hover:border-primary transition-all dark:bg-secondary/80 dark:border-zinc-500"
+          className="flex items-center gap-2 w-fit border border-dashed inner-shadow mx-2 px-4 py-1 rounded-lg hover:bg-secondary hover:border-primary transition-all dark:border-zinc-500"
           initial={{ scale: 1 }}
           whileHover={{ scale: 1.01, transition: { duration: 0.1, ease: "easeInOut" } }}
       >

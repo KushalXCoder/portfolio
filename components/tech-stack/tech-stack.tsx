@@ -71,7 +71,7 @@ const TechStack = () => {
                                             width={1000}
                                             priority
                                             draggable={false}
-                                            className="h-14 w-14 border border-dashed p-2 rounded-lg opacity-80 dark:bg-white/50 hover:opacity-100 hover:border-primary transition-all"
+                                            className="h-14 w-14 border border-dashed p-2 rounded-lg opacity-80 hover:opacity-100 hover:border-primary transition-all"
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent className="font-poppins">

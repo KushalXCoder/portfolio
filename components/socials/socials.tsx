@@ -4,12 +4,11 @@ import { motion } from "motion/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-import { Github, Linkedin, Mail } from "lucide-react";
 
 const socials = [
-    { name: "GitHub", icon: Github, link: "https://github.com/KushalXCoder"},
-    { name: "LinkedIn", icon: Linkedin, link: "https://www.linkedin.com/in/kushalrathod/" },
-    { name: "Gmail", icon: Mail, link: "mailto:kushalrathod@gmail.com" },
+    { name: "GitHub", icon: "/technologies/github", link: "https://github.com/KushalXCoder"},
+    { name: "LinkedIn", icon: "/companies/linkedin", link: "https://www.linkedin.com/in/kushalrathod/" },
+    { name: "Gmail", icon: "/companies/gmail", link: "mailto:kushalrathod@gmail.com" },
 ]
 
 const Socials = () => {
@@ -20,8 +19,13 @@ const Socials = () => {
             <Tooltip key={index}>
                 <TooltipTrigger>
                     <Link href={social.link} target="_blank">
-                        <social.icon
-                            className="h-6 w-6"
+                        <motion.img
+                            src={`.${social.icon}.svg`}
+                            alt={social.icon}
+                            draggable={false}
+                            initial={{ opacity: theme === "dark" ? 0.9 : 0.8 }}
+                            whileHover={{ opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } }}
+                            className="h-9 w-9"
                         />
                     </Link>
                 </TooltipTrigger>

@@ -1,18 +1,16 @@
 "use client";
 
 import { GitHubCalendar } from "react-github-calendar";
-import { useTheme } from "next-themes";
 import 'react-activity-calendar/tooltips.css';
 
 const GitHubCalendarComp = () => {
-  const { theme } = useTheme();
   return (
     <div className="mb-5">
         <h3 className="text-gray-500">Featured</h3>
         <h1 className="text-2xl font-bold">GitHub Calendar</h1>
         <GitHubCalendar
             username="kushalxcoder"
-            colorScheme={theme === "dark" ? "dark" : "light"}
+            colorScheme="light"
             blockSize={12}
             blockMargin={3}
             tooltips={{
