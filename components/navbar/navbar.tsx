@@ -1,15 +1,15 @@
 import Link from "next/link";
 import Profile from "./profile";
 import ModeToogle from "./mode-toggle";
+import { Button } from "../ui/button";
+import UserCommandButton from "./command-button";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Home", href: "/" },
     { name: "My Stack", href: "#stack" },
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Components", href: "/components" },
-
   ];
 
   return (
@@ -26,7 +26,10 @@ const Navbar = () => {
             </Link>
           ))}
         </div>
-        <ModeToogle />
+        <div className="flex items-center gap-3">
+          <UserCommandButton />
+          <ModeToogle />
+        </div>
     </div>
   )
 }

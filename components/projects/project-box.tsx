@@ -59,7 +59,7 @@ const ProjectBox = ({ data } : ProjectBoxProps) => {
                         <h1 className="font-semibold">Tools</h1>
                         <div className="flex items-center gap-2 mt-1">
                             {data.tools.map((tool) => (
-                                <Tooltip>
+                                <Tooltip key={tool.name}>
                                     <TooltipTrigger>
                                         <Image
                                             key={tool.name}

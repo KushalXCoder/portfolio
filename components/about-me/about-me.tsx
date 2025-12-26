@@ -28,7 +28,7 @@ const AboutMe = () => {
         </p>
         <p className='italic mt-3 flex flex-col items-end'>
             - building frontend that is efficient and scalable. As, design levitates but performance stays.
-            <p className='font-bold'>me</p>
+            <span className='font-bold'>me</span>
         </p>
     </div>
   )
