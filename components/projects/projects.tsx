@@ -66,11 +66,9 @@ const Projects = () => {
         }
     }
     return (
-        <div>
+        <div id="projects">
             <h3 className="text-sm text-gray-500">Featured</h3>
-            <h1
-                className="text-2xl font-bold"
-            >
+            <h1 className="text-2xl font-bold">
                 Projects
                 <span className="text-gray-500 text-sm ms-1">({totalProjects+1})</span>
             </h1>

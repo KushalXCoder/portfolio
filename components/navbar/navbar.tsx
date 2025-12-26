@@ -4,8 +4,12 @@ import ModeToogle from "./mode-toggle";
 
 const Navbar = () => {
   const navItems = [
-    { name: "Work", href: "/" },
+    { name: "Home", href: "/" },
+    { name: "My Stack", href: "#stack" },
+    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
     { name: "Components", href: "/components" },
+
   ];
 
   return (

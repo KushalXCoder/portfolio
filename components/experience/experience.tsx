@@ -16,7 +16,7 @@ const used_tech = [
 
 const Experience = () => {
   return (
-    <div>
+    <div id="experience">
         <h3 className="text-sm text-gray-500">Featured</h3>
         <h1 className="text-2xl font-bold">Experience</h1>
         {/* Club Duelz */}
