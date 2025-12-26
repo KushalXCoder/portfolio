@@ -20,13 +20,17 @@ const otherItems = [
 
 const UserCommandBox = () => {
     const router = useRouter();
-    const { open, setOpen, openSettings, setOpenSettings } = useUserStore();
-    
-    const hashName = window.location.hash;
+    const { open, setOpen, setOpenSettings } = useUserStore();
+    let hashName : string;
+
+    if (typeof window !== 'undefined') {
+        hashName = window.location.hash;
+    }
 
     useEffect(() => {
-        console.log(openSettings);
-    }, [openSettings]);
+        if (open) document.body.style.overflow = "hidden";
+        else document.body.style.overflow = "none";
+    }, [open]);
 
     useEffect(() => {
         const down = (e: KeyboardEvent) => {
@@ -42,7 +46,7 @@ const UserCommandBox = () => {
         return () => document.removeEventListener("keydown", down);
     }, []);
     return (
-        <CommandDialog open={open} onOpenChange={setOpen} className="font-poppins z-50">
+        <CommandDialog open={open} onOpenChange={setOpen} className="font-poppins">
             <CommandInput placeholder="Type a command to search..." />
             <CommandList>
                 <CommandEmpty className="px-4 py-2">No results found.</CommandEmpty>
