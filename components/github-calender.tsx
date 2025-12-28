@@ -8,8 +8,8 @@ const GitHubCalendarComp = () => {
   const { theme } = useTheme();
   return (
     <div className="mb-5">
-        <h3 className="text-gray-500">Featured</h3>
-        <h1 className="text-2xl font-bold">GitHub Calendar</h1>
+        <h3 className="text-sm text-gray-500">Featured</h3>
+        <h1 className="text-xl md:text-2xl font-bold mb-3">GitHub Calendar</h1>
         <GitHubCalendar
             username="kushalxcoder"
             colorScheme={theme === 'dark' ? 'dark' : 'light'}

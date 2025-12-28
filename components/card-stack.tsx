@@ -43,7 +43,7 @@ const CardStack = ({ songs }: CardStackProps) => {
           <ArrowRight className="inline h-4 w-4" />
         </p>
       </div>
-      <div className="flex flex-col gap-3 relative h-26">
+      <div className="relative h-26">
         {songs.length > 0 ? (
           <>
             <motion.div
@@ -94,11 +94,11 @@ const CardStack = ({ songs }: CardStackProps) => {
         )}
       </div>
       <div className="flex justify-between items-center">
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 max-sm:text-sm">
             Powered by
             <span className="text-green-500">{" "}Spotify</span>
         </p>
-        <p className="inner-shadow border border-dashed rounded-lg px-3 py-1">{currIdx + 1}</p>
+        <p className="inner-shadow border border-dashed rounded-lg px-3 py-1 text-sm">{currIdx + 1}</p>
       </div>
     </div>
   )

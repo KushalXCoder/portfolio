@@ -12,7 +12,7 @@ const links = [
 const AboutMe = () => {
   return (
     <div>
-        <div className="text-black dark:text-white/80 mt-5">
+        <div className="text-gray-500 mt-5">
           <span className='mb-1'>
               I build <span className="font-bold">scalable</span> and{" "}
               <span className="font-bold">efficient</span> web apps (which are also appealing :){" "}
@@ -22,10 +22,10 @@ const AboutMe = () => {
           {" "}and{" "}
           <Link href="#stack">more...</Link>
         </div>
-        <p className='text-black dark:text-white/80 mt-1'>
+        <p className='text-gray-500 mt-1'>
           With more interest towards <span className="font-bold">frontend</span> and it&apos;s scalability, I love to explore new tech and building components.
         </p>
-        <p className='italic mt-3 max-sm:text-sm flex flex-col items-end text-black dark:text-white/80'>
+        <p className='italic mt-3 max-sm:text-sm flex flex-col items-end text-gray-500'>
             - building frontend that is efficient and scalable. As, design levitates but performance stays.
             <span className='font-bold'>me</span>
         </p>

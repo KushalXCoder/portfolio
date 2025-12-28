@@ -41,7 +41,7 @@ const ProjectBox = ({ data } : ProjectBoxProps) => {
                 draggable={false}
                 className="h-50 object-cover rounded-t-lg"
             />
-            <div className="h-full flex flex-col justify-between px-4 py-3">
+            <div className="h-full flex flex-col justify-between px-4 py-3 max-sm:text-sm">
                 <div>
                     <div className="flex justify-between items-center">
                         <h1 className="text-lg">{data.name}</h1>
@@ -69,7 +69,7 @@ const ProjectBox = ({ data } : ProjectBoxProps) => {
                                             width={1000}
                                             priority
                                             draggable={false}
-                                            className="h-8 w-8"
+                                            className="size-6 md:size-8"
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent className="text-sm font-poppins">

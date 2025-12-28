@@ -53,13 +53,13 @@ const TechStack = () => {
   
   return (
     <div id="stack" className="mt-5">
-        <h3 className="text-gray-500">Featured</h3>
-        <h1 className="text-2xl font-bold">My Stack</h1>    
+        <h3 className="text-sm text-gray-500">Featured</h3>
+        <h1 className="text-xl md:text-2xl font-bold">My Stack</h1>    
         <div className="flex flex-col gap-2 mt-5">
             {stack.map((tech,index) => (
                 <div key={index}>
                     <h1 className="capitalize mb-1">{tech.name}</h1>
-                    <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex flex-wrap items-center gap-2 md:gap-3">
                         {tech.items.map((item,index) => (
                             <div key={index}>
                                 <Tooltip>
@@ -71,7 +71,7 @@ const TechStack = () => {
                                             width={1000}
                                             priority
                                             draggable={false}
-                                            className="h-14 w-14 border border-dashed p-2 rounded-lg opacity-80 dark:bg-white/50 hover:opacity-100 hover:border-primary transition-all"
+                                            className="size-10 md:size-14 border border-dashed p-2 rounded-lg opacity-80 dark:bg-white/50 hover:opacity-100 hover:border-primary transition-all"
                                         />
                                     </TooltipTrigger>
                                     <TooltipContent className="font-poppins">

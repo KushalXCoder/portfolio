@@ -68,11 +68,11 @@ const Projects = () => {
     return (
         <div id="projects">
             <h3 className="text-sm text-gray-500">Featured</h3>
-            <h1 className="text-2xl font-bold">
+            <h1 className="text-xl md:text-2xl font-bold">
                 Projects
                 <span className="text-gray-500 text-sm ms-1">({totalProjects+1})</span>
             </h1>
-            <div className={`grid grid-cols-2 gap-5 mt-5`}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
                 <AnimatePresence>
                     {projectsData.slice(0, maxVisible + 1).map((project) => (
                         <ProjectBox key={project.name} data={project} />
@@ -80,7 +80,7 @@ const Projects = () => {
                 </AnimatePresence>
             </div>
             <p
-                className="inline-block text-gray-500 mt-5 hover:underline cursor-pointer"
+                className="inline-block text-gray-500 mt-3 md:mt-5 hover:underline cursor-pointer max-sm:text-sm"
                 onClick={handleShow}
             >
                 {maxVisible === 1 ? 'Show More' : 'Show Less'}
