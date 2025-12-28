@@ -1,11 +1,11 @@
 export type SongData = {
-    track: { album: AlbumData };
+    track: TrackData;
 };
 
-export type AlbumData = {
+export type TrackData = {
+    album: { images: ImageData[] };
     name: string;
     external_urls: { spotify: string };
-    images: ImageData[];
     artists: ArtistsData[];
 }
 

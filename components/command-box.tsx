@@ -29,7 +29,7 @@ const UserCommandBox = () => {
 
     useEffect(() => {
         if (open) document.body.style.overflow = "hidden";
-        else document.body.style.overflow = "none";
+        else document.body.style.overflow = "auto";
     }, [open]);
 
     useEffect(() => {
@@ -48,7 +48,10 @@ const UserCommandBox = () => {
     return (
         <CommandDialog open={open} onOpenChange={setOpen} className="font-poppins">
             <CommandInput placeholder="Type a command to search..." />
-            <CommandList>
+            <CommandList
+                onWheel={(e) => e.stopPropagation()}
+                onTouchMove={(e) => e.stopPropagation()}
+            >
                 <CommandEmpty className="px-4 py-2">No results found.</CommandEmpty>
                 <CommandGroup heading="Suggestions">
                     {suggestions.map((suggestion) => (    

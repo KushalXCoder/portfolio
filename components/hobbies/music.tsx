@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import CardStack from "../card-stack";
-import { AlbumData, SongData } from "@/types/songs.type";
+import { SongData, TrackData } from "@/types/songs.type";
 
 const MusicBox = () => {
-  const [songs, setSongs] = useState<AlbumData[]>([]);
+  const [songs, setSongs] = useState<TrackData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   
   useEffect(() => {
@@ -18,7 +18,7 @@ const MusicBox = () => {
 
             if(res.ok) {
                 console.log("Fetched song data:", data);
-                setSongs(data.data.items.map((item: SongData) => item.track.album));
+                setSongs(data.data.items.slice(0,5).map((item: SongData) => item.track));
                 setLoading(false);
                 return;
             }

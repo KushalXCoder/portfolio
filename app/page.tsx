@@ -11,6 +11,7 @@ import TechStack from "@/components/tech-stack/tech-stack";
 import { useEffect, useState } from "react";
 import { ReactLenis } from 'lenis/react';
 import Projects from "@/components/projects/projects";
+import UserCommandBox from "@/components/command-box";
 
 export default function Home() {
   const gradient = "bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.04)_2px,transparent_2px,transparent_6px)] dark:bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.04)_2px,transparent_2px,transparent_6px)]";
@@ -35,6 +36,7 @@ export default function Home() {
   return (
     <>
       <ReactLenis root />
+      <UserCommandBox />
       <div className="container mx-auto max-w-4xl min-h-[calc(100vh-80px)] px-8 my-10 font-poppins z-10">
         <ProfileSection />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>

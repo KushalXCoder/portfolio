@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import ThemeProvider from "@/providers/theme-provider";
 import CursorAvatar from "@/components/cursor-avatar";
-import UserCommandBox from "@/components/command-box";
+// import UserCommandBox from "@/components/command-box";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -45,7 +45,7 @@ export default function RootLayout({
         >
           <CursorAvatar />
           <Navbar/>
-          <UserCommandBox />
+          {/* <UserCommandBox /> */}
           {children}
         </ThemeProvider>
       </body>

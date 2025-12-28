@@ -1,15 +1,15 @@
 "use client";
 
-import { AlbumData } from "@/types/songs.type"
 import Image from "next/image";
 import Link from "next/link";
 import { motion, PanInfo } from "motion/react";
 import { useState } from "react";
-import { Disc3 } from "lucide-react";
+import { ArrowLeft, ArrowRight, Disc3 } from "lucide-react";
 import MusicLoader from "./hobbies/music-loader";
+import { TrackData } from "@/types/songs.type";
 
 type CardStackProps = {
-    songs: AlbumData[];
+    songs: TrackData[];
 };
 
 const CardStack = ({ songs }: CardStackProps) => {
@@ -33,7 +33,17 @@ const CardStack = ({ songs }: CardStackProps) => {
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="flex flex-col gap-3 relative h-26 mt-5">
+      <div className="flex justify-between items-center mt-5 text-gray-500 text-sm">
+        <p>
+          <ArrowLeft className="inline h-4 w-4" />
+          Back
+        </p>
+        <p>
+          Forward
+          <ArrowRight className="inline h-4 w-4" />
+        </p>
+      </div>
+      <div className="flex flex-col gap-3 relative h-26">
         {songs.length > 0 ? (
           <>
             <motion.div
@@ -44,14 +54,14 @@ const CardStack = ({ songs }: CardStackProps) => {
             >
               <div className="flex justify-between items-end gap-4">
                 <div className="flex items-end gap-4">
-                    <Image src={songs[currIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
+                    <Image src={songs[nextIdx].album.images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
                     <div>
                         <h1 className="text-lg">
-                            <Link href={songs[currIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
-                                {songs[currIdx].name}
+                            <Link href={songs[nextIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
+                                {songs[nextIdx].name}
                             </Link>
                         </h1>
-                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[currIdx].artists[0].name}</h3>
+                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[nextIdx].artists[0].name}</h3>
                     </div>
                 </div>
                 <Disc3 className="animate-spin" />
@@ -65,14 +75,14 @@ const CardStack = ({ songs }: CardStackProps) => {
             >
               <div className="flex justify-between items-end gap-4">
                 <div className="flex items-end gap-4">
-                    <Image src={songs[nextIdx].images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
+                    <Image src={songs[currIdx].album.images[0].url} alt="Poster" height={1000} width={1000} priority draggable={false} className="h-20 w-20 rounded-lg" />
                     <div>
                         <h1 className="text-lg">
-                            <Link href={songs[nextIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
-                                {songs[nextIdx].name}
+                            <Link href={songs[currIdx].external_urls.spotify} target="_blank" className="font-bold hover:text-green-600 hover:underline transition-all">
+                                {songs[currIdx].name}
                             </Link>
                         </h1>
-                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[nextIdx].artists[0].name}</h3>
+                        <h3 className="text-gray-500 text-sm mt-[-3px]">by {songs[currIdx].artists[0].name}</h3>
                     </div>
                 </div>
                 <Disc3 className="animate-spin" />
