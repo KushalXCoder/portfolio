@@ -33,11 +33,11 @@ const ModeToggle = () => {
       <div className="relative bg-secondary border p-2 rounded-full cursor-pointer">
         <Sun
           onClick={() => handleToggle("dark")}
-          className="h-5 w-5 scale-100 rotate-0 transition-all dark:scale-0 dark:rotate-90"
+          className="size-4 md:size-5 block dark:hidden transition-all"
         />
         <Moon
           onClick={() => handleToggle("light")}
-          className="absolute top-1/5 left-1/4 h-5 w-5 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0"
+          className="size-4 md:size-5 hidden transition-all dark:block"
         />
       </div>
 

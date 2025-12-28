@@ -12,21 +12,20 @@ const links = [
 const AboutMe = () => {
   return (
     <div>
-        <p className="flex flex-wrap whitespace-pre-wrap items-center text-zinc-600 dark:text-zinc-500 mt-5">
-            <span>
-                I build <span className="font-bold">scalable</span> and <span className="font-bold">efficient</span> web apps (which are also appealing : ) using
-            </span>
-            <LanguageBox data={links} />
-            <span>
-                <Link href="#stack">
-                , more...
-                </Link>
-            </span>
-            <span>
-                With more interest towards <span className="font-bold">frontend</span> and it&apos;s scalability, I love to explore new tech and building components.
-            </span>
+        <div className="text-black dark:text-white/80 mt-5">
+          <span className='mb-1'>
+              I build <span className="font-bold">scalable</span> and{" "}
+              <span className="font-bold">efficient</span> web apps (which are also appealing :){" "}
+              using{" "}
+          </span>
+          <LanguageBox data={links} />
+          {" "}and{" "}
+          <Link href="#stack">more...</Link>
+        </div>
+        <p className='text-black dark:text-white/80 mt-1'>
+          With more interest towards <span className="font-bold">frontend</span> and it&apos;s scalability, I love to explore new tech and building components.
         </p>
-        <p className='italic mt-3 flex flex-col items-end'>
+        <p className='italic mt-3 max-sm:text-sm flex flex-col items-end text-black dark:text-white/80'>
             - building frontend that is efficient and scalable. As, design levitates but performance stays.
             <span className='font-bold'>me</span>
         </p>

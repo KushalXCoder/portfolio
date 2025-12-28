@@ -18,7 +18,7 @@ const Setting = () => {
   return (
     <Dialog open={openSettings} onOpenChange={setOpenSettings}>
         <DialogTrigger>
-            <Settings onClick={() => setOpenSettings(true)} className='hover:rotate-90 transition-all cursor-pointer' />
+            <Settings onClick={() => setOpenSettings(true)} className='size-5 md:size-6 hover:rotate-90 transition-all cursor-pointer' />
         </DialogTrigger>
         <DialogContent className='font-poppins'>
             <DialogHeader>

@@ -66,7 +66,7 @@ const Speaker = ({ name } : { name: string }) => {
   
   return (
     <motion.div onClick={speakText} initial={{ scale: 1 }} whileTap={{ scale: 0.85, transition: { ease: "easeInOut" } }}>
-        <Volume2 />
+        <Volume2 className="size-5 md:size-6" />
     </motion.div>
   )
 }

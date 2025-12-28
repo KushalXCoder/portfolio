@@ -6,12 +6,10 @@ const Social = () => {
   return (
     <>
         <Socials />
-        <div className="flex items-center mb-8">
-            <Button variant="ghost" className="h-10 inner-shadow border px-5 mt-5 cursor-pointer dark:bg-accent">
-              <File />
-              <a href="/resume.pdf" target='_blank' download>Resume/CV</a>
-            </Button>
-        </div>
+        <Button variant="ghost" className="inner-shadow border px-5 mt-3 cursor-pointer dark:bg-accent">
+          <File />
+          <a href="/resume.pdf" target='_blank' download>Resume/CV</a>
+        </Button>
     </>
   )
 }

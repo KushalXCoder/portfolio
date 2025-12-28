@@ -37,7 +37,7 @@ export default function Home() {
     <>
       <ReactLenis root />
       <UserCommandBox />
-      <div className="container mx-auto max-w-4xl min-h-[calc(100vh-80px)] px-8 my-10 font-poppins z-10">
+      <div className="w-screen lg:container lg:mx-auto lg:max-w-4xl min-h-[calc(100vh-80px)] px-5 lg:px-8 my-5 md:my-10 font-poppins z-10">
         <ProfileSection />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
         <AboutMe />

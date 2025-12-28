@@ -2,14 +2,13 @@
 
 import { motion } from "motion/react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { cn } from "@/lib/utils";
 
 type ProfileProps = {
-  height: number;
-  width: number;
   className?: string;
 };
 
-const Profile = ({ height, width, className } : ProfileProps) => {
+const Profile = ({ className } : ProfileProps) => {
   return (
     <Tooltip>
         <TooltipTrigger className="block">
@@ -21,8 +20,7 @@ const Profile = ({ height, width, className } : ProfileProps) => {
               height={1000}
               width={1000}
               draggable={false}
-              className={`${className}`}
-              style={{ height: height, width: width }}
+              className={cn(className)}
             />
         </TooltipTrigger>
         <TooltipContent className="font-poppins">

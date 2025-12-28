@@ -10,8 +10,8 @@ const used_tech = [
   { name: 'Zustand', url: '/technologies/zustand.svg' },
   { name: 'Tanstack', url: '/technologies/tanstack.svg' },
   { name: 'Zod', url: '/technologies/zod.svg' },
-  { name: 'ShadCN', url: '/technologies/shadcn-ui.svg' },
   { name: 'Axios', url: '/technologies/axios.svg' },
+  { name: 'ShadCN', url: '/technologies/shadcn-ui.svg' },
 ];
 
 const Experience = () => {
@@ -52,7 +52,7 @@ const Experience = () => {
           </div>
           <div>
             <h1 className="text-lg font-bold">Tools & Technologies used</h1>
-            <div className="flex flex-wrap gap-y-2 mt-3">
+            <div className="mt-3">
               <LanguageBox data={used_tech} />
             </div>
           </div>

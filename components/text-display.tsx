@@ -21,7 +21,7 @@ const TextDisplay = () => {
 
 
   return (
-    <div className="relative h-8 overflow-hidden px-4 py-4 border border-l-0 dark:border-zinc-700 flex items-center">
+    <div className="relative h-8 overflow-hidden p-4 border md:border-l-0 dark:border-zinc-700 flex items-center">
         <AnimatePresence>
             <motion.p
                 key={currIdx}
