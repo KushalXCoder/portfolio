@@ -80,7 +80,7 @@ const ProjectBox = ({ data } : ProjectBoxProps) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between items-center mt-5">
+                <div className="flex justify-between items-end mt-5">
                     <StatusButton status={data.status} />
                     <Link href="/" className="text-gray-500 hover:underline">
                         Read More
