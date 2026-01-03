@@ -45,9 +45,9 @@ const Experience = () => {
                 <Instagram className="size-5 md:size-6 opacity-50" />
               </Link>
             </div>
-            <div className="border rounded-lg bg-green-100 border-green-500 inner-shadow flex items-center gap-2 px-4 py-1">
-              <div className="size-3 rounded-full bg-green-500"></div>
-              <p className="text-sm text-black">Working</p>
+            <div className="border rounded-lg bg-blue-100 border-blue-500 inner-shadow flex items-center gap-2 px-4 py-1">
+              <div className="size-3 rounded-full bg-blue-500"></div>
+              <p className="text-sm text-black">Completed</p>
             </div>
           </div>
           <div>

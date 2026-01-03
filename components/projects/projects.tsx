@@ -22,7 +22,7 @@ const Projects = () => {
                 { name: 'Gemini', url: '/technologies/gemini.svg' },
                 { name: 'Vercel', url: '/technologies/vercel.svg' },
             ],
-            website: 'https://invoiceeai.vercel.app',
+            website: 'https://invoicee-ai.vercel.app',
             github: 'https://github.com/KushalXCoder/invoiceeai',
             status: 'Completed',
         },
@@ -68,10 +68,13 @@ const Projects = () => {
     return (
         <div id="projects">
             <h3 className="text-sm text-gray-500">Featured</h3>
-            <h1 className="text-xl md:text-2xl font-bold">
-                Projects
-                <span className="text-gray-500 text-sm ms-1">({totalProjects+1})</span>
-            </h1>
+            <div className="flex justify-between items-center">
+                <h1 className="text-xl md:text-2xl font-bold">
+                    Projects
+                    <span className="text-gray-500 text-sm ms-1">({totalProjects+1})</span>
+                </h1>
+                <h1 className='border w-fit px-4 rounded-md inner-shadow'>Currently building: <span className="text-green-500 font-semibold">CodeCoach</span></h1>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
                 <AnimatePresence>
                     {projectsData.slice(0, maxVisible + 1).map((project) => (
