@@ -5,26 +5,26 @@ import ProjectBox from "./project-box";
 import { useState } from "react";
 
 const Projects = () => {
-    const totalProjects = 2;
+    const totalProjects = 3;
     const [maxVisible, setMaxVisible] =  useState<number>(1);
 
     const projectsData = [
         {
-            name: 'InvoiceeAI',
-            image: '/projects/invoicee-ai.png',
-            description: 'An invoice generation and management app, making invoice generation easier, whether manually or using the AI.',
+            name: 'CodeCoach',
+            image: '/projects/CodeCoach3.png',
+            description: 'An open source learning platform to practice daily curated codeforces questions based on your selected topics and ratings.',
             tools: [
                 { name: 'NextJS', url: '/technologies/nextjs.svg' },
                 { name: 'TypeScript', url: '/technologies/typescript.svg' },
                 { name: 'TailwindCSS', url: '/technologies/tailwind.svg' },
                 { name: 'Zustand', url: '/technologies/zustand.svg' },
                 { name: 'MongoDB', url: '/technologies/mongodb.svg' },
-                { name: 'Gemini', url: '/technologies/gemini.svg' },
-                { name: 'Vercel', url: '/technologies/vercel.svg' },
+                { name: 'Redis', url: '/technologies/redis.svg' },
+                { name: 'Mistral AI', url: '/technologies/mistral-ai.svg' },
             ],
-            website: 'https://invoicee-ai.vercel.app',
-            github: 'https://github.com/KushalXCoder/invoiceeai',
-            status: 'Completed',
+            website: 'https://codecoach-io.vercel.app',
+            github: 'https://github.com/KushalXCoder/codecoach',
+            status: 'Working',
         },
         {
             name: 'InvoiceeAI',
