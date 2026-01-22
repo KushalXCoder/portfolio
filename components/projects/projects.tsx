@@ -27,6 +27,23 @@ const Projects = () => {
             status: 'Completed',
         },
         {
+            name: 'InvoiceeAI',
+            image: '/projects/invoicee-ai.png',
+            description: 'An invoice generation and management app, making invoice generation easier, whether manually or using the AI.',
+            tools: [
+                { name: 'NextJS', url: '/technologies/nextjs.svg' },
+                { name: 'TypeScript', url: '/technologies/typescript.svg' },
+                { name: 'TailwindCSS', url: '/technologies/tailwind.svg' },
+                { name: 'Zustand', url: '/technologies/zustand.svg' },
+                { name: 'MongoDB', url: '/technologies/mongodb.svg' },
+                { name: 'Gemini', url: '/technologies/gemini.svg' },
+                { name: 'Vercel', url: '/technologies/vercel.svg' },
+            ],
+            website: 'https://invoicee-ai.vercel.app',
+            github: 'https://github.com/KushalXCoder/invoiceeai',
+            status: 'Completed',
+        },
+        {
             name: 'SecureSend',
             image: '/projects/securesend1.png',
             description: 'A website to securely send email in gmail, so that no AI can read your email.',
