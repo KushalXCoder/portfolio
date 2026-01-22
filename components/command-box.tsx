@@ -18,6 +18,10 @@ const otherItems = [
     { icon: <Settings />, title: "Open Settings", description: "Open the settings dialog.", link: "" },
 ];
 
+const projects = [
+    { icon: <Box />, title: "CodeCoach", description: "Navigate to the project CodeCoach", hash: "#projects" },
+];
+
 const UserCommandBox = () => {
     const router = useRouter();
     const { open, setOpen, setOpenSettings } = useUserStore();
@@ -67,6 +71,24 @@ const UserCommandBox = () => {
                             <div>
                                 <h1 className="font-semibold">{suggestion.title}</h1>
                                 <p className="text-sm text-gray-500">{suggestion.description}</p>
+                            </div>
+                        </CommandItem>
+                    ))}
+                </CommandGroup>
+                <CommandGroup heading="Projects">
+                    {projects.map((project) => (
+                        <CommandItem
+                            onSelect={() => {
+                                setOpen(false);
+                                if(hashName === project.hash) return;
+                                router.push(project.hash);
+                            }}
+                            className="flex items-center gap-3"
+                        >
+                            {project.icon}
+                            <div>
+                                <h1 className="font-semibold">{project.title}</h1>
+                                <p className="text-sm text-gray-500">{project.description}</p>
                             </div>
                         </CommandItem>
                     ))}
