@@ -46,11 +46,12 @@ const ModeToggle = () => {
           <AnimatePresence>
             {showReveal && (
               <motion.div
-                initial={{ clipPath: "circle(0% at 100% 0)" }}
-                animate={{ clipPath: "circle(160% at 0 0)" }}
-                transition={{ duration: 0.9, ease: "easeInOut" }}
-                className={`fixed inset-0 pointer-events-none z-100 opacity-10 ${
-                  theme === "light" ? "bg-black" : "bg-white"
+                initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
+                animate={{ opacity: 1, backdropFilter: "blur(10px)", transition: { ease: "circIn" } }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className={`fixed inset-0 z-50 pointer-events-none ${
+                  theme === "light" ? "bg-black/20" : "bg-white/20"
                 }`}
               />
             )}

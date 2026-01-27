@@ -82,9 +82,9 @@ const ProjectBox = ({ data } : ProjectBoxProps) => {
                 </div>
                 <div className="flex justify-between items-end mt-5">
                     <StatusButton status={data.status} />
-                    <Link href="/" className="text-gray-500 hover:underline">
+                    {/* <Link href="/" className="text-gray-500 hover:underline">
                         Read More
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </motion.div>

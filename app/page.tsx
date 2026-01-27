@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { ReactLenis } from 'lenis/react';
 import Projects from "@/components/projects/projects";
 import UserCommandBox from "@/components/command-box";
+import VisitorButton from "@/components/visitor-button";
 
 export default function Home() {
   const gradient = "bg-[repeating-linear-gradient(45deg,rgba(0,0,0,0.1)_0,rgba(0,0,0,0.04)_2px,transparent_2px,transparent_6px)] dark:bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.2)_0,rgba(255,255,255,0.04)_2px,transparent_2px,transparent_6px)]";
@@ -53,6 +54,7 @@ export default function Home() {
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
         <Hobbies />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
+        {/* <VisitorButton /> */}
         <Footer />
       </div>
     </>
