@@ -15,12 +15,12 @@ const Active = () => {
         <HoverCardContent className="w-80">
             <div className="flex justify-between gap-4 font-poppins">
                 <div className="space-y-1">
-                    <h1 className="text-sm font-semibold">Currently working - Remote</h1>
+                    <h1 className="text-sm font-semibold">Status - Looking for oppurtunities</h1>
                     <p className="text-sm">
-                        Frontend Intern at Club Duelz - A football community platform.
+                        Ex-Frontend Intern at Club Duelz - A football community platform.
                     </p>
                     <div className="text-muted-foreground text-xs">
-                        Joined September 2025
+                        Sept 2025 - Dec 2025
                     </div>
                 </div>
             </div>

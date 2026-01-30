@@ -1,16 +1,16 @@
 import Socials from './socials'
-import { Button } from '../ui/button'
 import { File } from 'lucide-react'
+import { ConfettiButton } from '../ui/confetti'
 
 const Social = () => {
   return (
-    <>
+    <div className='mt-4'>
         <Socials />
-        <Button variant="ghost" className="inner-shadow border px-5 mt-3 cursor-pointer dark:bg-accent">
+        <ConfettiButton className="inner-shadow border px-5 mt-1.5 cursor-pointer dark:bg-accent">
           <File />
           <a href="/resume.pdf" target='_blank' download>Resume/CV</a>
-        </Button>
-    </>
+        </ConfettiButton>
+    </div>
   )
 }
 

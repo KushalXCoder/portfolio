@@ -31,10 +31,6 @@ const AboutMe = () => {
         <p className='text-gray-500'>
           With more interest towards <span className="font-bold">frontend</span> and it&apos;s scalability, I love to explore new tech and building components.
         </p>
-        <p className='italic mt-3 max-sm:text-sm flex flex-col items-end text-gray-500'>
-            - building frontend that is efficient and scalable. As, design levitates but performance stays.
-            <span className='font-bold'>me</span>
-        </p>
     </div>
   )
 }

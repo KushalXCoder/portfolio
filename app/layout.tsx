@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 import ThemeProvider from "@/providers/theme-provider";
 import CursorAvatar from "@/components/cursor-avatar";
+import { Toaster } from "@/components/ui/sonner";
 // import UserCommandBox from "@/components/command-box";
 
 const poppins = Poppins({
@@ -45,8 +46,8 @@ export default function RootLayout({
         >
           <CursorAvatar />
           <Navbar/>
-          {/* <UserCommandBox /> */}
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

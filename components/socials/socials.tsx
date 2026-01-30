@@ -15,13 +15,13 @@ const socials = [
 const Socials = () => {
   const { theme } = useTheme(); 
   return (
-    <div className="flex items-center gap-2 md:gap-3 mt-5">
+    <div className="flex items-center gap-2 md:gap-3">
         {socials.map((social,index) => (    
             <Tooltip key={index}>
                 <TooltipTrigger>
                     <Link href={social.link} target="_blank">
                         <social.icon
-                            className="size-5 md:size-6"
+                            className="size-5 md:size-5"
                         />
                     </Link>
                 </TooltipTrigger>

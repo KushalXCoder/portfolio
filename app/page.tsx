@@ -54,6 +54,11 @@ export default function Home() {
         <Hobbies />
         <div className={`w-full h-12 my-4 ${gradient}`}></div>
         <Footer />
+        <div className="pointer-events-none fixed bottom-0 left-0 right-0 h-24 
+          backdrop-blur-3xl
+          bg-white/30 dark:bg-black/30
+          mask-[linear-gradient(to_top,black,transparent)]">
+        </div>
       </div>
     </>
   );
