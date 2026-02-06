@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar/navbar";
+import Navbar from "@/app-components/navbar/navbar";
 import ThemeProvider from "@/providers/theme-provider";
-import CursorAvatar from "@/components/cursor-avatar";
-import { Toaster } from "@/components/ui/sonner";
+import CursorAvatar from "@/app-components/cursor-avatar";
+import { Toaster } from "@/app-components/ui/sonner";
 // import UserCommandBox from "@/components/command-box";
 
 const poppins = Poppins({
